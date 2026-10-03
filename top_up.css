@@ -1,0 +1,143 @@
+body {
+  background-color: #000000;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "IdentityV";
+  src: url("https://ukl0000.github.io/identityv-font/identityv.ttf.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* HEADER */
+.header {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background: transparent;
+  z-index: 10;
+}
+
+ .header img {
+  width: 250px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+/* HOME BUTTON */
+.home-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.home-button:hover {
+  color: #ec3232;
+}
+
+/* container */
+/* container */
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* background */
+.idv1 {
+  width: 100%;
+  height: 850px;
+  object-fit: cover;
+  display: block;
+  opacity: 0.5;
+}
+
+
+/* Recharge title */
+.title {
+  color: #e6e6e6;
+  font-family: "IdentityV";
+
+  position: absolute;
+
+  top: 13%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  margin: 0;
+
+  font-size: clamp(50px, 5vw, 70px);
+
+  filter:
+    drop-shadow(0 0 13px black)
+    drop-shadow(0 0 18px rgba(0, 0, 0, 0.8));
+}
+
+
+.container .title span {
+  display: inline-block;
+  border: 3px solid #d4d4d4;
+  padding: 20px 35px;
+  line-height: 1;
+}
+
+.topup {
+  position: absolute;
+
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: min(750px, 70%);
+}
+
+
+.topup img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+/* Bottom bar*/
+.bottom_bar {
+  background-color: black;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  Padding:30px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.icons img {
+  width: 200px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+
+.bottom_bar p {
+  color: white;
+  width:300px;
+  margin:40px 0;
+  font-size: 17px;
+}
+
