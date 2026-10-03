@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Website Layout</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+
+     <!-- header/banner -->
+  <div class="header">
+   <a href="index.html"> <img src="idv-icon1.png" width="275px"> </a>
+  </div>
+    <hr>
+    
+ <!-- Nav bar -->
+     <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="character.html">Characters</a>
+    <div class="dropdown">
+  <a>How to play ▾</a>
+  <div class="dropdown-content">
+    <a href="survivor.html">Survivor</a>
+    <a href="hunter.html">Hunter</a>
+  </div>
+</div>
+       <a href="top_up.html">Top up</a>
+     </div>
+    <hr>
+
+
+ <!-- Content -->
+    
+<div class="slider">
+  <button class="arrow left" onclick="previousImage()">❮</button>
+
+  <a id="imageLink" href="https://play.google.com/store/search?q=identity%20v&c=apps&hl=en_CA" target="_blank">
+    <img id="sliderImage" src="idv1.jpg" alt="Identity V" title="right click it open link">
+  </a>
+
+  <button class="arrow right" onclick="nextImage()">❯</button>
+</div>
+
+<script>
+const images = [
+  "idv1.jpg",
+ "Prodigy-idv2.webp",
+  "Championship-idv3.webp",
+  "Merch-idv4.webp"
+];
+
+const links = [
+  "https://play.google.com/store/search?q=identity%20v&c=apps&hl=en_CA",
+ "character.html",
+  "https://www.youtube.com/watch?v=TDSa-3swQn0",
+  "https://neteasestore.com/collections/identity-v"
+];
+
+let currentImage = 0;
+
+function updateImage() {
+  document.getElementById("sliderImage").src = images[currentImage];
+  document.getElementById("imageLink").href = links[currentImage];
+
+  if (currentImage == 1) {
+    document.getElementById("imageLink").target = "_self";
+    document.getElementById("imageLink").onclick = function() {
+      localStorage.setItem("character", "prodigy");
+    };
+  } else {
+    document.getElementById("imageLink").target = "_blank";
+    document.getElementById("imageLink").onclick = null;
+  }
+}
+
+function nextImage() {
+  currentImage++;
+
+  if (currentImage >= images.length) {
+    currentImage = 0;
+  }
+
+  updateImage();
+}
+
+function previousImage() {
+  currentImage--;
+
+  if (currentImage < 0) {
+    currentImage = images.length - 1;
+  }
+
+  updateImage();
+}
+</script>
+
+<style>
+  
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+</style>
+    
+   
+    
+    <!-- Paragraph -->
+<div class="container">
+  <img src="home-bg1.png" alt="bg1" style="width:100%;">
+  <div class="centered"> Identity V: 1 vs 4 Asymmetrical Mobile Game<br>Welcome to Identity V,the first asymmetrical mobile game developed by NetEase<br>With a gothich art style,<br> mysterious storylines and exciting 1 vs 4 gameplay, identity V will bring you a breathtaking experience.<br>You will enter the game as detective first,<br> who receive a mysterious letter<br> being invited to investigate an abandoned manor and search for a missing girl<br>As you get closer to the truth,</div>
+</div>
+
+    
+   <!-- Bottom bar -->
+  <div class="bottom_bar"> 
+  <div class="icons">
+    <img src="NetEase-icon2.png" alt="Icon 2">
+    <img src="Joker-icon3.jpg" alt="Icon 3">
+  </div>
+
+  <p>Privacy Policy &#38; Terms of Use<br>
+©Joker Studio ©2020 NetEaseInc. All Rights Reserved
+  
+  </p>
+</div>
+
+
+
+    
+  </body>
+</html>
+  
