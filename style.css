@@ -1,0 +1,187 @@
+body {
+  background-color:black;
+  height: 100%;
+  width: 100%;
+}
+
+.header{
+  text-align:center;
+  font-size:45px;
+  margin:20px;
+}
+
+
+/* Style the top navigation bar */
+
+/* Style the topnav links */
+
+@font-face {
+  font-family: "IdentityV";
+  src: url("https://ukl0000.github.io/identityv-font/identityv.ttf.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Navigation bar */
+.topnav {
+  background-color: #ec3232;
+  margin: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: visible;
+}
+
+/* Navigation links */
+.topnav > a,
+.dropdown > a {
+  width: 22%;
+  color: #000000;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "IdentityV", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Hover effect */
+.topnav > a:hover,
+.dropdown > a:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  width: 22%;
+}
+
+/* Dropdown button */
+.dropdown > a {
+  display: block;
+  width: 100%;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  z-index: 100;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  padding: 12px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "IdentityV", sans-serif;
+}
+
+/* Dropdown link hover */
+.dropdown-content a:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* Show dropdown when hovering */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+
+/* Content */
+
+.slider {
+  position: relative;
+  width: 92%;
+  height: 90%;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.slider a {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+/* Information */
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.container img {
+  width: 100%;
+  display: block;
+  opacity:0.4
+}
+
+.centered {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  Font-family:calibri; 
+  line-height:2
+}
+
+/* Bottom bar*/
+.bottom_bar {
+  background-color: black;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  Padding:30px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.icons img {
+  width: 200px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+
+.bottom_bar p {
+  color: white;
+  width:350px;
+  margin:40px 0;
+  font-size: 17px;
+}
