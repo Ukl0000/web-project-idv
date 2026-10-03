@@ -1,0 +1,471 @@
+body {
+  background-color:black;
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "IdentityV";
+  src: url("https://ukl0000.github.io/identityv-font/identityv.ttf.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* header */
+.header {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background: transparent;
+  z-index: 10;
+}
+
+ .header img {
+  width: 250px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+
+/* home button */
+.home-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+  cursor: pointer;
+
+  z-index: 1000;
+}
+
+.home-button:hover {
+  color: #ec3232;
+}
+
+/* title */
+.title{
+  color:#e6e6e6;
+  font-family:"IdentityV";
+ text-align:center;
+   position: relative;
+  top: 120px;
+  font-size:90px;
+   filter:
+    drop-shadow(0 0 13px black)
+    drop-shadow(0 0 18px rgb(0, 0, 0,0.8));
+}
+
+
+
+
+
+/* SorH buttons*/
+.SorH-buttons {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.SorH-buttons button {
+  background-color: rgba(0,0,0,0);
+  color: #e6e6e6;
+  border: 2px solid #d4d4d4;
+  padding: 10px 30px;
+  font-size: 25px;
+  font-family: "IdentityV";
+  cursor: pointer;
+  margin: 0 18px;
+  width:160px;
+}
+
+.SorH-buttons button:hover {
+  background-color: #333;
+}
+
+/* survivor's button blue */
+.SorH-buttons button:first-child:hover {
+  color: #4da6ff; /* Survivors = blue */
+}
+
+/* hunter's button red */
+.SorH-buttons button:last-child:hover {
+  color: #ec3232; 
+}
+
+
+/* Survivor Section */
+.survivor-section{
+   width: 90%;
+  margin: 80px auto;
+  display:none;
+}
+
+.survivor-title {
+  color: #78b7ff;
+  font-size: 65px;
+  margin-bottom:5px
+}
+.survivor-line {
+  border: 1px solid #78b7ff;
+}
+
+/* Search Bar */
+
+/* Survivor search bar */
+.survivor-search img{
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.survivor-search {
+  margin-top: 20px;
+  margin-bottom: 10px;
+    display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.survivor-search input {
+  width: 300px;
+  padding: 8px 12px;
+
+  background-color: transparent;
+  color: white;
+
+  border: 1px solid #c2c2c2;
+  font-size: 18px;
+}
+
+.survivor-search input:focus {
+  outline: none;
+  border-color: #78b7ff;
+}
+
+/* scroll bar */
+
+.survivor-sheet::-webkit-scrollbar {
+  width: 10px;
+}
+
+.survivor-sheet::-webkit-scrollbar-track {
+  background: #111;
+}
+
+.survivor-sheet::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+
+.survivor-sheet::-webkit-scrollbar-thumb:hover {
+  background: #78b7ff;
+}
+
+/* Survivor Sheet*/
+.survivor-all{
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.survivor-sheet {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+  width:60%;
+  height: 550px;
+overflow-y: auto;
+}
+
+.survivor-box {
+  text-align: center;
+  cursor:pointer;
+}
+
+.survivor-box img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+
+.survivor-box img:hover {
+  border-color: #78b7ff;
+}
+
+.survivor-box p {
+  color: white;
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+
+ /* Character info */
+
+.survivor-info{
+  width:35%;
+  margin-top:30px;
+  border-left: 1px solid #9c9c9c;
+  padding-left: 30px;
+  color: white;
+}
+
+.info-img {
+   display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+
+.survivor-image{
+   width: 250px;
+  height: 250px;
+ object-fit:contain;
+   position: relative;
+  left: 90px;
+
+}
+
+.survivor-info h1 {
+  color: #78b7ff;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom:7px
+}
+
+.info-line{
+  border:1px solid #ededed;
+  margin-left:0;
+  margin-right:auto;
+width:140%;
+}
+
+.survivor-info h2 {
+  color: white;
+  font-size: 23px;
+  font-weight: normal;
+}
+
+.survivor-info h3 {
+  color: #78b7ff;
+  font-size: 28px;
+  margin-bottom: 5px;
+  margin-top:5px;
+}
+
+.ability-line{
+  border:1px solid #ededed;
+}
+
+.survivor-info p {
+  color: white;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top:5px
+}
+
+
+
+/* Hunter */
+.hunter-section{
+   width: 90%;
+  margin: 80px auto;
+}
+
+.hunter-title {
+  color: #ec3232;
+  font-size: 65px;
+  margin-bottom:5px
+}
+.hunter-line {
+  border: 1px solid #ec3232;
+}
+
+/* hunter search bar */
+.hunter-search img{
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.hunter-search {
+  margin-top: 20px;
+  margin-bottom: 10px;
+    display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hunter-search input {
+  width: 300px;
+  padding: 8px 12px;
+
+  background-color: transparent;
+  color: white;
+
+  border: 1px solid #c2c2c2;
+  font-size: 18px;
+}
+
+.hunter-search input:focus {
+  outline: none;
+  border-color: #ec3232;
+}
+
+/* scroll bar */
+
+.hunter-sheet::-webkit-scrollbar {
+  width: 10px;
+}
+
+.hunter-sheet::-webkit-scrollbar-track {
+  background: #111;
+}
+
+.hunter-sheet::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+
+.hunter-sheet::-webkit-scrollbar-thumb:hover {
+  background: #ec3232;
+}
+
+/* hunter Sheet*/
+.hunter-all{
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.hunter-sheet {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+  width:60%;
+  height: 550px;
+overflow-y: auto;
+}
+
+.hunter-box {
+  text-align: center;
+  cursor:pointer;
+}
+
+.hunter-box img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+
+.hunter-box img:hover {
+  border-color: #ec3232;
+}
+
+.hunter-box p {
+  color: white;
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+
+ /* Character info */
+
+.hunter-info{
+  width:35%;
+  margin-top:30px;
+  border-left: 1px solid #9c9c9c;
+  padding-left: 30px;
+  color: white;
+}
+
+.info-img {
+   display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+
+.hunter-image{
+   width: 250px;
+  height: 250px;
+ object-fit:contain;
+   position: relative;
+  left: 90px;
+
+}
+
+.hunter-info h1 {
+  color: #ec3232;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom:7px
+}
+
+.info-line{
+  border:1px solid #ededed;
+  margin-left:0;
+  margin-right:auto;
+width:140%;
+}
+
+.hunter-info h2 {
+  color: white;
+  font-size: 23px;
+  font-weight: normal;
+}
+
+.hunter-info h3 {
+  color: #ec3232;
+  font-size: 28px;
+  margin-bottom: 5px;
+  margin-top:5px;
+}
+
+.ability-line{
+  border:1px solid #ededed;
+}
+
+.hunter-info p {
+  color: white;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top:5px
+}
+/* Bottom bar*/
+.bottom_bar {
+  background-color: black;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  Padding:30px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.icons img {
+  width: 200px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+
+.bottom_bar p {
+  color: white;
+  width:300px;
+  margin:40px 0;
+  font-size: 17px;
+}
