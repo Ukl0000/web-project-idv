@@ -111,7 +111,7 @@ body {
 .survivor-section{
    width: 90%;
   margin: 80px auto;
-  display:none;
+  display:block;
 }
 
 .survivor-title {
@@ -286,6 +286,7 @@ width:140%;
 .hunter-section{
    width: 90%;
   margin: 80px auto;
+  display:none;
 }
 
 .hunter-title {
